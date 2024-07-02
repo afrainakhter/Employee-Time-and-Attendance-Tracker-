@@ -1,0 +1,177 @@
+.header {
+  background-color: #009efb;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1039;
+  height: 50px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+#navcon {
+  color: white;
+}
+
+.Selected:active {
+  background-color: blue;
+}
+
+body {
+  background-color: rgb(214, 214, 214);
+}
+
+.header .header-left {
+  float: left;
+  height: 50px;
+  padding: 0 20px;
+  position: relative;
+  text-align: center;
+  width: 230px;
+  z-index: 1;
+}
+
+.logo {
+  align-items: center;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+}
+
+.logo span {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.header .navbar-nav .badge {
+  position: absolute;
+  right: 7px;
+  top: 4px;
+}
+
+/*-----------------
+	6. Sidebar
+-----------------------*/
+
+.sidebar {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  top: 50px;
+  width: 230px;
+  z-index: 1039;
+  background-color: rgb(1, 8, 39);
+  bottom: 0;
+  margin-top: 0px;
+  position: fixed;
+  left: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.sidebar.opened {
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.sidebar-inner {
+  height: 100%;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.sidebar-menu ul {
+  font-size: 14px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-menu li a {
+  color: #888;
+  display: block;
+  font-size: 15px;
+  height: auto;
+  padding: 0 20px;
+}
+
+.sidebar-menu li a:hover {
+  color: #009efb;
+}
+
+.sidebar-menu li.active a {
+  color: #009efb;
+  background-color: black;
+}
+
+.menu-title {
+  color: #333;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 12px 20px;
+}
+
+.menu-title > i {
+  float: right;
+  line-height: 40px;
+}
+
+.sidebar-menu li.menu-title a {
+  color: #009efb;
+  display: inline-block;
+  float: right;
+  padding: 0;
+}
+
+.sidebar-menu li.menu-title a.btn {
+  color: #fff;
+  display: block;
+  float: none;
+  font-size: 15px;
+  line-height: inherit;
+  margin-bottom: 15px;
+}
+
+.sidebar-menu ul ul a.active {
+  color: #009efb;
+  text-decoration: underline;
+}
+
+.mobile_btn {
+  display: none;
+}
+
+.sidebar .sidebar-menu > ul > li > a span {
+  transition: all 0.2s ease-in-out 0s;
+  display: inline-block;
+  margin-left: 10px;
+  white-space: nowrap;
+}
+
+.sidebar .sidebar-menu > ul > li > a span.badge {
+  color: #fff;
+  margin-left: auto;
+}
+
+.sidebar-menu ul ul a {
+  display: block;
+  font-size: 14px;
+  padding: 9px 10px 9px 50px;
+  position: relative;
+}
+
+.sidebar-menu ul ul {
+  background-color: #f3f3f3;
+  display: none;
+}
+
+.sidebar-menu ul ul ul a {
+  padding-left: 70px;
+}
+
+.sidebar-menu ul ul ul ul a {
+  padding-left: 90px;
+}
+
+.sidebar-menu > ul > li {
+  position: relative;
+}
