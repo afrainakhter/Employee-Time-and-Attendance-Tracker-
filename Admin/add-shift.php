@@ -3,8 +3,9 @@ session_start();
 if(empty($_SESSION['name']))
 {
     header('location:index.php');
+    exit();
 }
-include('header.php');
+
 include('includes/connection.php');
     
       
@@ -22,12 +23,15 @@ include('includes/connection.php');
       if($insert_query>0)
       {
           $msg = "Shift created successfully";
+          header('location:shift.php');
+          exit();
       }
       else
       {
           $msg = "Error!";
       }
     }
+    include('header.php');
 ?>
         <div class="page-wrapper">
             <div class="content">
