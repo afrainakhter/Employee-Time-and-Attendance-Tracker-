@@ -3,8 +3,9 @@ session_start();
 if(empty($_SESSION['name']))
 {
     header('location:index.php');
+    exit();
 }
-include('header.php');
+
 include('includes/connection.php');
     
     if(isset($_REQUEST['add-location']))
@@ -16,12 +17,15 @@ include('includes/connection.php');
       if($insert_query>0)
       {
           $msg = "Location created successfully";
+          header('location:location.php');
+          exit();
       }
       else
       {
           $msg = "Error!";
       }
     }
+    include('header.php');
 ?>
         <div class="page-wrapper">
             <div class="content">
