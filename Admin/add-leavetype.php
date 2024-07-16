@@ -3,9 +3,9 @@ session_start();
 
 if (empty($_SESSION['name']) || $_SESSION['role'] != 1) {
     header('location: index.php');
+    exit();
 }
 
-include('header.php');
 include('includes/connection.php');
 
 $fetch_query = mysqli_query($connection, "select max(id) as id from tblleavetype");
@@ -20,10 +20,13 @@ if (isset($_POST['add-leavetype'])) {
     
     if ($insert_query) {
         $msg = "Leave Type created successfully";
+        header('location: leave-section.php');
+        exit();
     } else {
         $msg = "Error!";
     }
 }
+include('header.php');
 ?>
 
 <div class="page-wrapper">
