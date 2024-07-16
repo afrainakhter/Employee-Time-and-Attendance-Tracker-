@@ -3,8 +3,9 @@ session_start();
 if(empty($_SESSION['name']))
 {
     header('location:index.php');
+    exit();
 }
-include('header.php');
+
 include('includes/connection.php');
     
     if(isset($_REQUEST['add-department']))
@@ -19,12 +20,15 @@ include('includes/connection.php');
       if($insert_query>0)
       {
           $msg = "Department created successfully";
+          header('location:departments.php');
+          exit();
       }
       else
       {
           $msg = "Error!";
       }
     }
+    include('header.php');
 ?>
         <div class="page-wrapper">
             <div class="content">
