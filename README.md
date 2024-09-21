@@ -1,1 +1,1 @@
-# Employee-Time-and-Attendance-Tracker-
+# Employee-Time-and-Attendance-Tracker- is a web-based application designed to simplify and automate the process of managing employee attendance and time tracking in an organization. It provides a user-friendly interface for both employees and administrators, ensuring seamless recording of work hours, leave management, and reporting. 
